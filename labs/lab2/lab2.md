@@ -11,6 +11,7 @@ Course: CIS 106 Linux Fundamentals
 ![q1specs](specs.png)
 ## Question 2
 ![q2](question%202.png)
+
 ## Question 3 
 ![q3](question%203.png)
 ## Question 4
