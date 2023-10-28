@@ -7,14 +7,21 @@ Course: CIS 106 Linux Fundamentals
 # Week Report 4
 
 ## Practice from the presentation the linux file system
+## Pratice 1
 ![prac1](../labs/lab4/prac1.png)
+## Practice 2 
 ![prac2.1](../labs/lab4/prac2.1.png)
+
 ![prac2.2](../labs/lab4/prac2.2.png)
+## Practice 3
 ![prac3](../labs/lab4/prac3.png)
 
 ## The Linux file system directories and their purpose
+## FS 1
 ![fs1](../labs/lab4/fs1.png)
+## FS 2
 ![fs2](../labs/lab4/fs2.png)
+## FS 3
 ![fs3](../labs/lab4/fs3.png)
 
 ## All the commands for navigating the file system
