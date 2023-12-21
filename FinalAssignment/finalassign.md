@@ -6,35 +6,55 @@ Course: CIS 106 Linux Fundamentals
 
 ## awk
 * Description:
-* a scripting language used for processing and displaying text.
+  a scripting language used for processing and displaying text.
 Formula:
-* `awk+ options + awkcommand + file+ file to save`
+  `awk+ options + awkcommand + file+ file to save`
 * Examples:
-* Print the first column of every line of a file
-* `awk '{print$1}' ~/Documents/Csv/chips.csv`
-* Print first field of /etc/passwd file
-* `awk -F '{print $1} /etc/passwd`
-* Print the first and 3 field with line numbers
-* `awk -F: '{print NR,$1,$3} /etc/passwd`
+  Print the first column of every line of a file
+  `awk '{print$1}' ~/Documents/Csv/chips.csv`
+  Print first field of /etc/passwd file
+  `awk -F '{print $1} /etc/passwd`
+  Print the first and 3 field with line numbers
+  `awk -F: '{print NR,$1,$3} /etc/passwd`
 ## cat
-Description:
+* Description:
 used for displaying the content of a file.
-Formula:
+* Formula:
 `cat + option + files to display`
-
+* Examples:
+  Displays the content of the cookies file
+ ` cat cookies.txt`
+  Displays the content with line numbers 
+  `cat -n /Documents/fold.sh`
+  Displays the content of a file while suppressing repeating empty lines to a single empty line
+  `cat -s hello.py`
 ## cp
-Description: copies files/directories from a source to a destination.
-Formula:
+* Description: copies files/directories from a source to a destination.
+* Formula:
 `cp + files to copy + destination`
+*Examples:
+Copy a file
+`cp Downloads/hi.txt Documents/`
+Copy the contents of a directory to another
+`cp Documents/Pictures/* ~/Downloads`
+Copy multiple files 
+`cp hello.sh book.txt store.py`
 ## cut
-Description: used to extract a specfic section of each line of a file and display it.
-Formula:
+* Description: used to extract a specfic section of each line of a file and display it.
+* Formula:
 `cut + option + files`
-## grep
-Description: used to search text in a given file.
-Formula:
-`grep + option + search criteria + files`
 Examples:
+Displays all of the users in your system
+`cut -d ':' -f1 /etc/passwd`
+Cut a file excluding a given field
+`cut -d ',' --complement -s -f3 passwds.txt`
+Cut a file with a delimiter then change it in the output
+`cut -d ';' -f1,8 --outputdelimiter=, =>, /Documents/cookies.txt`
+## grep
+* Description: used to search text in a given file.
+* Formula:
+`grep + option + search criteria + files`
+* Examples:
 Search any line that contains the word chips in the given file
 `grep 'chips' ~/Downloads/store.txt`
 Search for all lines that do not contain the word hello
@@ -42,10 +62,10 @@ Search for all lines that do not contain the word hello
 Search and match only the word
 `grep -o 'flat' Downloads/flat.txt`
 ## head
-Description: displays the top number of lines given in a file.
-Formula:
+* Description: displays the top number of lines given in a file.
+* Formula:
 `head + option + file`
-Examples:
+* Examples:
 Display the first 10 lines of a file
 `head file.txt`
 Display the first line of a file
@@ -53,10 +73,10 @@ Display the first line of a file
 Display the first 5 lines
 `head -5 file.txt`
 ## ls
-Description: used for displaying the files in a directory
-Formula
+* Description: used for displaying the files in a directory
+* Formula
 `ls + option + directory to list`
-Examples:
+* Examples:
 List the content of your current working directory
 `ls`
 long list all the files including hidden files
@@ -64,10 +84,10 @@ long list all the files including hidden files
 List the files in a given directory
 `ls lab2`
 ## man
-Description: pages that describe linux shell commands,executable programs,system calls,special files and so forth.
-Formula:
+* Description: pages that describe linux shell commands,executable programs,system calls,special files and so forth.
+* Formula:
 `man + command you want to look`
-Examples:
+* Examples:
 shows manual for the ls command
 `man ls`
 shows manual page 2 for mkdir command
@@ -75,10 +95,10 @@ shows manual page 2 for mkdir command
 shows manual page that has the word update
 `man -k update`
 ## mkdir
-Description: used to create directories.
-Formula:
+* Description: used to create directories.
+* Formula:
 `mkdir + the name of the directory`
-Examples:
+* Examples:
 Create a directory in the present working directory
 `mkdir chips`
 Create multiple directories
@@ -86,11 +106,11 @@ Create multiple directories
 Create a directory using absolute path
 `mkdir ~/water/lake`
 ## mv
-Description: moves and renames directories and files.
-Formula:
+* Description: moves and renames directories and files.
+* Formula:
 `mv + source + destination` to move files/directories
 `mv + file/directory to rename + new name` to rename files/directories.
-Examples:
+* Examples:
 Moving a file from a directory to another
 `mv Documents/labs Downloads/`
 Renaming a file
@@ -98,26 +118,26 @@ Renaming a file
 Moving and renaming a file
 `mv Documents/homework.docx Downloads/test.docx`
 ## tac
-Description: used for displaying content of a file in reverse order.
-Formula:
+* Description: used for displaying content of a file in reverse order.
+* Formula:
 `tac+ option + files to display`
-Examples:
+* Examples:
 Displays the content of a file in reverse order
 `tac chips.txt`
 ## tail
-Description: displays the last number of lines in a given file.
-Formula:
+* Description: displays the last number of lines in a given file.
+* Formula:
 `tail + option + file`
-Examples:
+* Examples:
 Displays the last line of a file
 `tail -1 book.txt`
 Displays the last 10 lines of a file
 `tail book.txt`
 ## touch
-Description: used to create files
-Formula:
+* Description: used to create files
+* Formula:
 `touch + file to make`
-Examples:
+* Examples:
 Creates a file
 `touch file`
 Creates multiple files 
@@ -125,25 +145,26 @@ Creates multiple files
 Create a file in a directory
 `touch ~/wallpapers/paper.png`
 ## tr
-Description: used for translating or deleting characters from standard output.
-Formula:
+* Description: used for translating or deleting characters from standard output.
+* Formula:
 `Standard output | tr + option + set + set`
-Examples:
+* Examples:
 Translate periods to colons
 `cat file.txt |tr '.'':'`
 Translates white space into tabs
 `cat chips.txt |tr "[:space:]" ''`
 ## tree
-Description:used to print a recursive directory listing the directory,subdirectories and files inside of the directory
+* Description:used to print a recursive directory listing the directory,subdirectories and files inside of the directory
+* Formula:
 `tree + directory`
-Examples:
+* Examples:
 Shows a tree for the chips directory
 `tree chips`
 Shows all files in directory including hidden 
 `tree -a chips`
 Shows only directories
 `tree -d chips`
-## How to work with multiple terminals open?|
+## How to work with multiple terminals open?
 to work with multiple terminals you can press ctrl + n to open a new terminal and use the `windowskey + left or right arrow keys` to set up your terminals side by side.
 ## How to work with manual pages?
  to work with man pages you must type man and the command you want to look at the options for then you can use the arrow keys to navigate or the e key to go forward one line and the y key to go backward one line.
